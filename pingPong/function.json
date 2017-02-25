@@ -9,7 +9,7 @@
     {
       "type": "http",
       "direction": "out",
-      "name": "$"
+      "name": "$return"
     }
   ],
   "disabled": false
