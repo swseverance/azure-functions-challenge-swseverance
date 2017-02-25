@@ -1,12 +1,9 @@
-module.exports = (context, item) => {
-  const { key, ArrayOfValues } = item;
-  const sorted = ArrayOfValues.sort((x, y) => x - y);
+const createTableEntry = require('./helpers');
 
-  context.bindings.outputTable = {
-    PartitionKey: 'Test',
-    RowKey: key,
-    ArrayOfValues: sorted
-  };
+module.exports = (context, item) => {
+  const tableEntry = createTableEntry(item);
+
+  context.bindings.outputTable.push(tableEntry);
 
   context.done();
 };

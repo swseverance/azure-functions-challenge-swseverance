@@ -10,7 +10,7 @@ describe('sortArray1a', () => {
     const context = {
       done: () => {},
       bindings: {
-        outputTable: null
+        outputTable: []
       }
     };
 
@@ -26,7 +26,7 @@ describe('sortArray1a', () => {
 
     sortArray1a(context, item);
 
-    expect(context.bindings.outputTable).to.eql(expected);
+    expect(context.bindings.outputTable[0]).to.eql(expected);
     expect(spy).to.have.been.called();
   });
 });
