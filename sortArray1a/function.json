@@ -1,0 +1,19 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "item",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "sortarrayqueue",
+      "connection": "function34db3eba96cd_STORAGE"
+    },
+    {
+      "type": "table",
+      "name": "outputTable",
+      "tableName": "sortedValuesTable",
+      "connection": "function34db3eba96cd_STORAGE",
+      "direction": "out"
+    }
+  ]
+}
