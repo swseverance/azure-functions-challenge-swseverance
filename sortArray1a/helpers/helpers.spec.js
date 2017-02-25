@@ -12,7 +12,7 @@ describe('createTableEntry', () => {
     const expected = {
       PartitionKey: 'Test',
       RowKey: 'ab12',
-      ArrayOfValues: [1, 92, 103]
+      ArrayOfValues: '1,92,103'
     };
 
     const actual = createTableEntry(input);
