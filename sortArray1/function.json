@@ -1,0 +1,23 @@
+{
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "direction": "in",
+      "webHookType": "genericJson",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "queue",
+      "name": "sortArrayQueueItem",
+      "queueName": "sortarrayqueue",
+      "connection": "function34db3eba96cd_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
