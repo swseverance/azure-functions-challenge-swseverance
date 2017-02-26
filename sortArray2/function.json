@@ -15,7 +15,7 @@
       "name": "tableEntry",
       "tableName": "sortedValuesTable",
       "partitionKey": "Test",
-      "rowKey": "{req.key}",
+      "rowKey": "{key}",
       "connection": "function34db3eba96cd_STORAGE",
       "direction": "in"
     }
