@@ -1,7 +1,4 @@
-const chai = require('chai');
-const { expect } = chai;
-const spies = require('chai-spies');
-chai.use(spies);
+const { expect } = require('chai')
 
 const createTableEntry = require('./');
 
@@ -12,7 +9,7 @@ describe('createTableEntry', () => {
     const expected = {
       PartitionKey: 'Test',
       RowKey: 'ab12',
-      ArrayOfValues: '1,92,103'
+      ArrayOfValues: [1, 92, 103]
     };
 
     const actual = createTableEntry(input);

@@ -21,12 +21,12 @@ describe('sortArray1a', () => {
     const expected = {
       PartitionKey: 'Test',
       RowKey: 'ab12',
-      ArrayOfValues: '1,92,103'
+      ArrayOfValues: [1, 92, 103]
     };
 
     sortArray1a(context, item);
 
-    const [ actual ] = context.bindings.outputTable;
+    const actual = context.bindings.outputTable;
 
     expect(actual).to.eql(expected);
 
