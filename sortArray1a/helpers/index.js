@@ -6,6 +6,6 @@ module.exports = item => {
   return {
     PartitionKey: 'Test',
     RowKey: key,
-    ArrayOfValues: sortedValues
+    ArrayOfValues: JSON.stringify(sortedValues)
   };
 };

@@ -1,0 +1,24 @@
+{
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "table",
+      "name": "tableEntry",
+      "tableName": "sortedValuesTable",
+      "partitionKey": "Test",
+      "rowKey": "{req.key}",
+      "connection": "function34db3eba96cd_STORAGE",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
