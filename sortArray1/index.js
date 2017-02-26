@@ -1,6 +1,7 @@
 module.exports = (context, req) => {
-  // a separate function will handle sorting of the array
-  // so that we can respond to client immediately
+  // place request body in a queue for future
+  // processing (sorting of the array values
+  // and subsequent storage in a table)
   context.bindings.sortArrayQueueItem = req;
 
   context.done(null, {});
