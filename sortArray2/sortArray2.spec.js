@@ -17,7 +17,7 @@ describe('sortArray2', () => {
     const tableEntry = { ArrayOfValues: "[1,2,3]" };
     const expected = {
       key: "abc123",
-      ArrayOfValues: "[1,2,3]"
+      ArrayOfValues: [1, 2, 3]
     };
 
     sortArray2(context, req, tableEntry);
