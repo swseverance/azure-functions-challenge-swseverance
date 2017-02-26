@@ -8,7 +8,10 @@ const sortArray1 = require('./');
 describe('sortArray1', () => {
   it('sends an empty response', () => {
     const context = {
-      done: () => {}
+      done: () => {},
+      bindings: {
+        sortArrayQueueItem: null
+      }
     };
 
     const spy = chai.spy.on(context, 'done');
@@ -23,13 +26,15 @@ describe('sortArray1', () => {
   it('adds the request body to a queue for subsequent sorting and storage', () => {
     const context = {
       done: () => {},
-      sortArrayQueueItem: null
+      bindings: {
+        sortArrayQueueItem: null
+      }
     };
 
     const input = { "key": "ab12", "ArrayOfValues": [ 92, 1, 103] };
 
     sortArray1(context, input);
 
-    expect(context.sortArrayQueueItem).to.equal(input);
+    expect(context.bindings.sortArrayQueueItem).to.equal(input);
   });
 });
